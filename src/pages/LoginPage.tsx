@@ -217,7 +217,7 @@ export const LoginPage = () => {
             <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
               <MessageSquare className="w-6 h-6 text-white" />
             </div>
-            <span className="text-2xl font-bold text-gray-900">EnterpriseCRM</span>
+            <span className="text-2xl font-bold text-gray-900">Silver Ant Marketing</span>
           </div>
           
 

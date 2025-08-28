@@ -1,73 +1,155 @@
-# Welcome to your Lovable project
+Technology Stack
+Frontend (Client-Side)
 
-## Project info
+React 18 – To build interactive web pages
 
-**URL**: https://lovable.dev/projects/8e906c38-9fea-4101-9fba-09e855fcf9a7
+TypeScript – Makes code safer and easier to debug
 
-## How can I edit this code?
+Vite – Fast build tool for development
 
-There are several ways of editing your application.
+Tailwind CSS – Quick and easy styling
 
-**Use Lovable**
+Shadcn/ui – Ready-made UI components
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/8e906c38-9fea-4101-9fba-09e855fcf9a7) and start prompting.
+Backend (Server-Side)
 
-Changes made via Lovable will be committed automatically to this repo.
+Node.js – Runs JavaScript on the server
 
-**Use your preferred IDE**
+Express.js – Makes APIs for frontend to use
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+Socket.IO – Real-time messaging between server and clients
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+Data Storage
 
-Follow these steps:
+JSON Files – Simple files to save data
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+fs module – Node.js tool to read/write files
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+Other Tools
 
-# Step 3: Install the necessary dependencies.
-npm i
+ESLint – Keeps code clean and organized
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+PostCSS – Optimizes CSS for faster loading
 
-**Edit a file directly in GitHub**
+Netlify / Vercel – To deploy the app online
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+Project Structure
+Root Files
+Hello-World-main/
+├── package.json      # Project info & dependencies
+├── vite.config.ts    # Vite settings
+├── tailwind.config.ts# Tailwind settings
+├── tsconfig.json     # TypeScript settings
+├── server.ts         # Backend server
+├── netlify.toml      # Netlify deployment
+├── vercel.json       # Vercel deployment
+└── railway.json      # Railway deployment
 
-**Use GitHub Codespaces**
+Source Code (src/)
+src/
+├── components/        # Reusable UI pieces
+├── contexts/          # Stores user login info
+├── hooks/             # Custom React hooks
+├── pages/             # App pages (login, signup, dashboard)
+├── services/          # Handles business logic
+├── main.tsx           # App entry point
+├── App.tsx            # Routing & main app
+├── index.css          # Global styles
+└── useCRMData.tsx     # Fetch CRM data
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+Public Files (public/)
+public/api/             # Mock data files
+├── register.json
+├── login.json
+├── messages.json
+├── chat-rooms.json
+├── groups.json
+└── crm-data.json
+favicon.svg             # Website icon
+robots.txt              # SEO rules
+_redirects              # Netlify routing rules
 
-## What technologies are used for this project?
+How Technologies Work
 
-This project is built with:
+React + TypeScript → Build UI, handle state, make app interactive
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Socket.IO → Send/receive messages instantly
 
-## How can I deploy this project?
+Express.js → Backend API for login, messages, and saving data
 
-Simply open [Lovable](https://lovable.dev/projects/8e906c38-9fea-4101-9fba-09e855fcf9a7) and click on Share -> Publish.
+Tailwind CSS → Style the app easily
 
-## Can I connect a custom domain to my Lovable project?
+JSON Files → Save users, messages, and CRM data
 
-Yes, you can!
+Problems & Solutions
+Problem	Solution	Files
+Messages needed refresh	Added Socket.IO	server.ts, Index.tsx
+Chat didn’t scroll	Auto-scroll with useEffect	Index.tsx
+Unread messages not clearing	Mark messages read automatically	Index.tsx
+New users not visible	Broadcast new users with Socket.IO	server.ts, Index.tsx
+Messages disappeared	Removed auto-delete	Index.tsx
+Hooks error	Fixed hook order	Index.tsx
+No edit/delete menu	Added right-click menu	Index.tsx
+How Data Flows
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+Messages:
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+User types → state updated
+
+Send via Socket.IO → server saves message
+
+Server sends message to all users
+
+Clients update → message appears
+
+Authentication:
+
+User logs in/registers → data saved in JSON
+
+Server checks → returns session info
+
+Client saves token → protects routes
+
+Real-time updates:
+
+Socket.IO connection → listens for messages → updates UI instantly
+
+Features
+
+Chat: Real-time messaging, private chat, auto-scroll, unread count
+
+Message Management: Edit/delete messages, timestamps, right-click menu
+
+User Management: Register/login, search/filter users, online/offline status
+
+CRM Dashboard: Manage leads, deals, tasks, and activities
+
+Deployment
+
+Works with Netlify, Vercel, Railway
+
+Local dev uses JSON files; production can use real database
+
+Environment variables used for API keys and server info
+
+Future Plans
+
+Use MongoDB/PostgreSQL instead of JSON
+
+Add file sharing, group chats, encryption, notifications
+
+Improve performance with pagination, image optimization, caching
+
+Project Stats
+
+50+ files, 2000+ lines of code
+
+20+ React components
+
+10+ API endpoints
+
+15+ Socket.IO events
+
+30+ Shadcn/ui components
+
+This app shows a modern and scalable design for real-time chat, user management, and CRM features, with clean and maintainable code. 

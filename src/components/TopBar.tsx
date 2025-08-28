@@ -40,7 +40,7 @@ export const TopBar = () => {
           <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
             <span className="text-white font-bold text-sm">*</span>
           </div>
-          <h1 className="text-xl font-bold">CRM Dashboard</h1>
+          <h1 className="text-xl font-bold">Silver Ant Marketing</h1>
         </div>
         
         <div className="relative w-96">

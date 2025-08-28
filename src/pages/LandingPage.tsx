@@ -45,7 +45,7 @@ export const LandingPage = () => {
             <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">
               <MessageSquare className="w-8 h-8 text-white" />
             </div>
-            <span className="text-3xl font-bold text-gray-900">EnterpriseCRM</span>
+            <span className="text-3xl font-bold text-gray-900">Silver Ant Marketing</span>
           </div>
           
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
